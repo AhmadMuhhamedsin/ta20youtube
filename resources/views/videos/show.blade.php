@@ -39,6 +39,7 @@
             <td>{{$comment->created_at->diffForHumans()}}</td>
         </tr>
     </tbody>
-</table>
     @endforeach
+</table>
+   
 @endsection
