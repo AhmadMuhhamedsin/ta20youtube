@@ -27,7 +27,7 @@
                 <td>{{$video->updated_at}}</td>
                 <td>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-primary">View</a>
+                        <a href="{{route('videos.show', ['video' => $video])}}" class="btn btn-primary">View</a>
                         <a href="{{route('videos.edit', ['video' => $video])}}" class="btn btn-warning">Edit</a>
                         <a href="{{route('videos.destroy', ['video' => $video])}}" class="btn btn-danger">Delete</a>
                     </div>

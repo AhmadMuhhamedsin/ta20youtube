@@ -62,7 +62,10 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        //
+        if($video->user->id !== Auth::user()->id){
+            throw new NotFoundHttpException();
+        }
+        return view('videos.show', compact('video'));
     }
 
     /**
